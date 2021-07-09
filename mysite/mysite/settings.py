@@ -133,7 +133,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#configure the django project to use it as default user model
+AUTH_USER_MODEL = 'profiles_api.UserProfile'
