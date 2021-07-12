@@ -16,7 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from profiles_api.views import TestView
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('profiles_api.urls'))
+    # path('api-auth/', include('rest_framework.urls')), # DRF for login and logout views
+    path('', TestView.as_view(), name='test')
+    
 ]
